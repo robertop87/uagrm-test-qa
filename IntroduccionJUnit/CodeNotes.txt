@@ -1,0 +1,18 @@
+=======
+Utilizar + para concatenar es MALA PRACTICA, smell
+=======
+//"Luis", "Roberto"
+//"Luis" + "Roberto"
+// > LuisRoberto
+
+//"Luis" + " " + "Roberto"
+// > Luis Roberto
+
+// "{0} {1}", name, second"
+// s"{name} {second}"
+
+// String.join("/", name, second)
+// Luis/Roberto
+
+// String.format("%s %s", name, second)
+// Luis Roberto
