@@ -1,6 +1,5 @@
 package edu.uagrm.main;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -17,7 +16,7 @@ public class MainTest {
     public void testGetFizzBuzzIfNumberIsDivisibleByThreeReturnFizz(){
         Main main = new Main();
         String expectedValue = "Fizz";
-        String result = main.getFizzBuzz(3);
+        String result = main.eval(3);
         assertEquals(expectedValue, result);
     }
 
@@ -25,7 +24,7 @@ public class MainTest {
     public void testGetFizzBuzzIfNumberIsDivisibleByFiveReturnBuzz(){
         Main main = new Main();
         String expectedValue = "Buzz";
-        String result = main.getFizzBuzz(5);
+        String result = main.eval(5);
         assertEquals(expectedValue, result);
     }
 
@@ -33,7 +32,7 @@ public class MainTest {
     public void testGetFizzBuzzIfNumberIsDivisibleByFiveAndThreeReturnFizzBuzz(){
         Main main = new Main();
         String expectedValue = "FizzBuzz";
-        String result = main.getFizzBuzz(15);
+        String result = main.eval(15);
         assertEquals(expectedValue, result);
     }
 
@@ -41,7 +40,7 @@ public class MainTest {
     public void testGetFizzBuzzIfNumberIsNoTDivisibleByFiveAndThreeReturnSameNumber(){
         Main main = new Main();
         String expectedValue = "1";
-        String result = main.getFizzBuzz(1);
+        String result = main.eval(1);
         assertEquals(expectedValue, result);
     }
 
@@ -49,7 +48,7 @@ public class MainTest {
     public void testGetFizzBuzzIfNumberIsZeroReturnZero(){
         Main main = new Main();
         String expectedValue = "0";
-        String result = main.getFizzBuzz(0);
+        String result = main.eval(0);
         assertEquals(expectedValue, result);
     }
 
