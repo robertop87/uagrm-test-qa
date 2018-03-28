@@ -14,17 +14,21 @@ public class Main {
     }
 
     public String eval(int value){
-        if(value==0){
-            return  String.valueOf(value);
+        if (value == 0) {
+            return String.valueOf(value);
         }
+
         String result = "";
-        if (value % 3 == 0){
+
+        if (value % 3 == 0) {
             result += "Fizz";
         }
-        if (value % 5 == 0){
+
+        if (value % 5 == 0) {
             result += "Buzz";
         }
-        if (result == ""){
+
+        if (result == "") {
             result = String.valueOf(value);
         }
 
