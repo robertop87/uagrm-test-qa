@@ -1,4 +1,4 @@
-package edu.uagrm.main;
+package edu.uagrm.core;
 
 import static org.junit.Assert.assertEquals;
 
