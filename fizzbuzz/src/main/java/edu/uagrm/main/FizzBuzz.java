@@ -2,10 +2,6 @@ package edu.uagrm.main;
 
 public class FizzBuzz {
 
-    public boolean init() {
-        return true;
-    }
-
     public String eval(int value){
         if (value == 0) {
             return String.valueOf(value);

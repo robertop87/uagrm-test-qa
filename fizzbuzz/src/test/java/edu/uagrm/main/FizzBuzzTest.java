@@ -7,12 +7,6 @@ import static org.junit.Assert.*;
 public class FizzBuzzTest {
 
     @Test
-    public void testInitShouldReturnsTrue() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        assertTrue(fizzBuzz.init());
-    }
-
-    @Test
     public void testGetFizzBuzzIfNumberIsDivisibleByThreeReturnFizz(){
         FizzBuzz fizzBuzz = new FizzBuzz();
         String expectedValue = "Fizz";
