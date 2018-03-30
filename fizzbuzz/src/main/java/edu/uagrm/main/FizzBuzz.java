@@ -1,6 +1,13 @@
 package edu.uagrm.main;
 
 public interface FizzBuzz {
+
+
+    /**
+     * @deprecated
+     * This method is not flexible and String is mandatory and, use getNumberType instead
+    */
+    @Deprecated
     static String eval(int value) {
       switch (getNumberType(value)) {
         case FIZZ: return "Fizz";
