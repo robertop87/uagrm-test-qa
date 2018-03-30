@@ -2,10 +2,23 @@ package edu.uagrm.main;
 
 public interface FizzBuzz {
     static String eval(int value) {
-        if (value == 0) return "0";
-        if ((value % (3*5)) == 0) return "FizzBuzz";
-        if (value % 3 == 0) return "Fizz";
-        if (value % 5 == 0) return "Buzz";
+        if (isFizz(value)) return "Fizz";
+        if (isBuzz(value)) return "Buzz";
+        if (isFizzBuzz(value)) return "FizzBuzz";
         return Integer.toString(value);
+    }
+
+    static boolean isFizz(int value) {
+        return value % 3 == 0
+            && value % 5 != 0;
+    }
+
+    static boolean isBuzz(int value) {
+        return value % 5 == 0
+            && value % 3 != 0;
+    }
+
+    static boolean isFizzBuzz(int value) {
+        return (value % (3*5)) == 0 && value != 0;
     }
 }
