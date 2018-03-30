@@ -2,6 +2,8 @@ package edu.uagrm.main;
 
 import static org.junit.Assert.assertEquals;
 
+import edu.uagrm.core.FizzBuzz;
+import edu.uagrm.core.FizzBuzzType;
 import org.junit.Test;
 
 public class FizzBuzzWithTypesTest {

@@ -1,5 +1,7 @@
 package edu.uagrm.main;
 
+import edu.uagrm.core.FizzBuzz;
+
 public class Main {
 
   public static void main(String[] args) {

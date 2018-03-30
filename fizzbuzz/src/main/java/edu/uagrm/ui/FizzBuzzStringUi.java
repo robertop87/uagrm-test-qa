@@ -1,4 +1,6 @@
-package edu.uagrm.main;
+package edu.uagrm.ui;
+
+import edu.uagrm.core.FizzBuzz;
 
 public interface FizzBuzzStringUi {
 

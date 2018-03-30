@@ -1,5 +1,7 @@
 package edu.uagrm.main;
 
+import edu.uagrm.ui.FizzBuzzStringUi;
+
 public class ClientUi {
 
   public static void main(String[] args) {
