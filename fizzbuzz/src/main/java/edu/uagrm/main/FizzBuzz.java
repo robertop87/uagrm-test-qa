@@ -2,10 +2,12 @@ package edu.uagrm.main;
 
 public interface FizzBuzz {
     static String eval(int value) {
-        if (isFizz(value)) return "Fizz";
-        if (isBuzz(value)) return "Buzz";
-        if (isFizzBuzz(value)) return "FizzBuzz";
-        return Integer.toString(value);
+      switch (getNumberType(value)) {
+        case FIZZ: return "Fizz";
+        case BUZZ: return "Buzz";
+        case FIZZBUZZ: return "FizzBuzz";
+        default: return Integer.toString(value);
+      }
     }
 
     static boolean isFizz(int value) {
@@ -20,5 +22,12 @@ public interface FizzBuzz {
 
     static boolean isFizzBuzz(int value) {
         return (value % (3*5)) == 0 && value != 0;
+    }
+
+    static FizzBuzzType getNumberType(int value) {
+      if (isFizz(value)) return FizzBuzzType.FIZZ;
+      if (isBuzz(value)) return FizzBuzzType.BUZZ;
+      if (isFizzBuzz(value)) return FizzBuzzType.FIZZBUZZ;
+      return FizzBuzzType.NUMBER;
     }
 }
