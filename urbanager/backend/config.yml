@@ -1,0 +1,33 @@
+logging:
+  level: INFO
+  loggers:
+    com.alenasoft: DEBUG
+
+server:
+  rootPath: /api
+
+database:
+  # the name of your JDBC driver
+  driverClass: org.h2.Driver
+
+  # the username
+  user: ec-user
+
+  # the password
+  password: 123
+
+  # the JDBC URL
+  url: jdbc:h2:mem:urbanagerdb
+
+  # the maximum amount of time to wait on an empty pool before throwing an exception
+  maxWaitForConnection: 1s
+
+  # the SQL query to run when validating a connection's liveness
+  validationQuery: "/* MyService Health Check */ SELECT 1"
+
+  # any properties specific to your JDBC driver:
+  properties:
+    charSet: UTF-8
+    hibernate.dialect: org.hibernate.dialect.H2Dialect
+    hibernate.hbm2ddl.auto: create
+    hibernate.show_sql: true
