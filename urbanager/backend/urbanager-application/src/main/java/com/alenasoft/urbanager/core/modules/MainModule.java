@@ -3,6 +3,8 @@ package com.alenasoft.urbanager.core.modules;
 import com.alenasoft.urbanager.UrbanagerConf;
 import com.alenasoft.urbanager.resources.example.service.ExampleService;
 import com.alenasoft.urbanager.resources.example.service.ExampleServiceImpl;
+import com.alenasoft.urbanager.resources.hello.HelloService;
+import com.alenasoft.urbanager.resources.hello.HelloServiceImpl;
 import ru.vyarus.dropwizard.guice.module.support.DropwizardAwareModule;
 
 /**
@@ -15,5 +17,6 @@ public class MainModule extends DropwizardAwareModule<UrbanagerConf> {
   @Override
   protected void configure() {
     bind(ExampleService.class).to(ExampleServiceImpl.class);
+    bind(HelloService.class).to(HelloServiceImpl.class);
   }
 }

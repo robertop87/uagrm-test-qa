@@ -3,6 +3,7 @@ package com.alenasoft.urbanager.core.modules;
 import com.alenasoft.urbanager.UrbanagerConf;
 import com.alenasoft.urbanager.resources.example.dao.ExampleDao;
 import com.alenasoft.urbanager.resources.example.dao.ExampleDaoImpl;
+import com.alenasoft.urbanager.resources.hello.ResultDao;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import io.dropwizard.hibernate.HibernateBundle;
@@ -27,6 +28,11 @@ public class HibernateModule extends AbstractModule {
   @Provides
   public ExampleDao providesCustomerDao(UrbanagerConf configuration) {
     return new ExampleDaoImpl(this.hibernate.getSessionFactory());
+  }
+
+  @Provides
+  public ResultDao providesResultDao(UrbanagerConf configuration) {
+    return new ResultDao(this.hibernate.getSessionFactory());
   }
 }
 
