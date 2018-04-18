@@ -11,5 +11,7 @@
     `$ npm i cucumber --save`
 3. Verificar la instalacion
     `$ ./node_modules/.bin/cucumber-js`
-4. Instalar chai js
+4. Instalar chai y request js
     `$ npm i chai --save`
+    `$ npm i request --save`
+    `$ npm i request-promise --save`

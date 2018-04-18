@@ -19,6 +19,8 @@
   "license": "ISC",
   "dependencies": {
     "chai": "^4.1.2",
-    "cucumber": "^4.2.1"
+    "cucumber": "^4.2.1",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
   }
 }
