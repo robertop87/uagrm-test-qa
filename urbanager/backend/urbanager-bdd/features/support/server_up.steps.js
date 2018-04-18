@@ -7,17 +7,25 @@ let urbanagerResponse;
 
 When('hago una solicitud GET al recurso /ping', async function () {
   await rp
-    .get("http://locahost:8080/ping")
+    .get("http://localhost:8080/api/ping")
     .on('response', function (response) {
-      console.log("### Response:", response);
       urbanagerResponse = response;
     })
     .on('error', function (error) {
-      console.log("### Error:", error);
       urbanagerResponse = error;
     });
 });
 
-Then('debo recibir una respuesta {int}', function (int) {
+Then('debo recibir una respuesta con codigo {int}', function (int) {
   expect(urbanagerResponse.statusCode).to.eql(int);
+});
+
+Then('un mensaje con el texto pong', function () {
+  let responseObj = JSON.parse(urbanagerResponse.body);
+  expect(responseObj.message).to.eql("pong");
+});
+
+Then('el mensaje con el timestamp del servicio de urbanager', function () {
+  let responseObj = JSON.parse(urbanagerResponse.body);
+  expect(responseObj.timestamp).to.be.an('number');
 });

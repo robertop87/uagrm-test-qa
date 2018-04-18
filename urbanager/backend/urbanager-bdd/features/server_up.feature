@@ -5,4 +5,6 @@ Feature: Verificar disponibilidad del Servidor
 
  Scenario: Servidor activo
    When hago una solicitud GET al recurso /ping
-   Then debo recibir una respuesta 200
+   Then debo recibir una respuesta con codigo 200
+      And un mensaje con el texto pong
+      And el mensaje con el timestamp del servicio de urbanager
