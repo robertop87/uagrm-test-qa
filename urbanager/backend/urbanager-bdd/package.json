@@ -1,0 +1,26 @@
+{
+  "name": "urbanager-bdd",
+  "version": "1.0.0",
+  "description": "Pruebas de aceptacion para la WEB API de urbanager",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "uagrm",
+    "maestria",
+    "ingenieria",
+    "software",
+    "programacion",
+    "bdd",
+    "tdd"
+  ],
+  "author": "Luis Roberto Perez",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "cucumber": "^4.2.1",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
+  }
+}
