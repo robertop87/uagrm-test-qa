@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Urbanager UI</title>
 </head>
 <body>
-$END$
+<div>
+  <label>Name:
+    <input name="nameInput" type="text" />
+  </label>
+  <label>CI:
+    <input name="ciInput" type="number" />
+  </label>
+
+  <button name="showButton" onclick="showResult()">Show</button>
+</div>
+<h1 name="showArea"></h1>
+<script>
+  <!--
+  function showResult() {
+    let showArea = this.document.getElementsByName("showArea")[0];
+    let nameInput = this.document.getElementsByName("nameInput")[0];
+    let ciInput = this.document.getElementsByName("ciInput")[0];
+
+    showArea.innerText = nameInput.value + " - " + ciInput.value;
+  }
+  -->
+</script>
 </body>
 </html>

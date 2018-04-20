@@ -36,7 +36,8 @@ public class UrbanagerApp extends Application<UrbanagerConf> {
 
   @Override
   public void initialize(final Bootstrap<UrbanagerConf> bootstrap) {
-    bootstrap.addBundle(new AssetsBundle("/tools/swagger", "/swagger"));
+    bootstrap.addBundle(new AssetsBundle("/tools/swagger", "/swagger", "index.html", "swagger"));
+    bootstrap.addBundle(new AssetsBundle("/ui", "/ui", "index.html", "ui"));
     bootstrap.addBundle(hibernate);
 
     bootstrap.addBundle(GuiceBundle.builder()
