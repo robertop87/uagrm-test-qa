@@ -15,3 +15,7 @@
     `$ npm i chai --save`
     `$ npm i request --save`
     `$ npm i request-promise --save`
+5. Instalar Selenium Web Driver
+    `$ npm install selenium-webdriver --save`
+6. Instalar el chrome driver de manera global
+    `$ npm install chromedriver --global`
