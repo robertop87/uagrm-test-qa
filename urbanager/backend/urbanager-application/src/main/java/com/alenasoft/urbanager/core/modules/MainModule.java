@@ -7,6 +7,8 @@ import com.alenasoft.urbanager.resources.hello.HelloService;
 import com.alenasoft.urbanager.resources.hello.HelloServiceImpl;
 import com.alenasoft.urbanager.resources.ping.service.PingService;
 import com.alenasoft.urbanager.resources.ping.service.PingServiceImpl;
+import com.alenasoft.urbanager.resources.user.UserService;
+import com.alenasoft.urbanager.resources.user.UserServiceStub;
 import ru.vyarus.dropwizard.guice.module.support.DropwizardAwareModule;
 
 /**
@@ -21,6 +23,9 @@ public class MainModule extends DropwizardAwareModule<UrbanagerConf> {
     bind(ExampleService.class).to(ExampleServiceImpl.class);
     bind(HelloService.class).to(HelloServiceImpl.class);
     bind(PingService.class).to(PingServiceImpl.class);
+    /*if (prod)
+     bind(UserService.class).to(UserServiceImplb.class);
+    else*/
+    bind(UserService.class).to(UserServiceStub.class);
   }
 }
-

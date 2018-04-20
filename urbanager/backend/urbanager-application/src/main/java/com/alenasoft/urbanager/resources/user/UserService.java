@@ -1,5 +1,10 @@
 package com.alenasoft.urbanager.resources.user;
 
-public class UserService {
+import com.alenasoft.urbanager.api.User;
 
+public interface UserService {
+
+  User getUserById(long userId) throws Exception;
+
+  long registerUser(User user);
 }
