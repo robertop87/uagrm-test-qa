@@ -2,6 +2,7 @@ package com.alenasoft.urbanager;
 
 import com.alenasoft.urbanager.api.Example;
 import com.alenasoft.urbanager.api.Result;
+import com.alenasoft.urbanager.api.User;
 import com.alenasoft.urbanager.core.modules.HibernateModule;
 import com.alenasoft.urbanager.core.modules.MainModule;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -18,7 +19,7 @@ import ru.vyarus.dropwizard.guice.GuiceBundle;
 public class UrbanagerApp extends Application<UrbanagerConf> {
 
   private final HibernateBundle<UrbanagerConf> hibernate = new
-      HibernateBundle<UrbanagerConf>(Example.class, Result.class) { // Register POJOs
+      HibernateBundle<UrbanagerConf>(Example.class, Result.class, User.class) { // Register POJOs
         @Override
         public DataSourceFactory getDataSourceFactory(UrbanagerConf configuration) {
           return configuration.getDataSourceFactory();
