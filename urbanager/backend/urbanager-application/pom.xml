@@ -15,7 +15,7 @@
   <properties>
     <dropwizard-guicey-version>4.0.1</dropwizard-guicey-version>
     <h2.version>1.4.193</h2.version>
-    <swagger.parser.version>1.0.28</swagger.parser.version>
+    <swagger.parser.version>1.0.31</swagger.parser.version>
   </properties>
 
   <dependencies>
